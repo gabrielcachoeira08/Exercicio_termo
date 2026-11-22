@@ -5,11 +5,11 @@ with open('todas_palavras.txt', 'r', encoding='utf-8') as entrada, \
         palavra = linha.strip()
 
         if len(palavra) == 5:
-            saida.write(palavra + '\n')
+            saida.write(palavra.lower() + '\n')
 
 with open('palavras_validas.txt', 'r', encoding='utf-8') as arquivo:
-    palavras = arquivo.read()
-    print(palavras)
+    palavras = arquivo.read().strip().split('\n')
+    print(len(palavras))
 
 
 
